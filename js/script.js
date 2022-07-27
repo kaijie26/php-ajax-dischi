@@ -4,16 +4,33 @@ var app = new Vue(
 
         data: {
             discs: [],
+            userGenre: 'all',
         },
 
-        mounted(){
-            axios.get('http://localhost:8888/php-ajax-dischi/api.php')
-            .then((response) =>{
-                
-                this.discs = response.data;
-            })
+        methods: {
+            getDiscsFromApi() {
+                axios.get('http://localhost:8888/php-ajax-dischi/api.php',
+                {
+                    params: {
+                        genre: this.userGenre,
 
-        }
+                    } 
+
+                }
+                )
+                .then((response) => { 
+                    this.discs = response.data;
+                    
+                });
+
+            }
+
+        },
+
+        mounted() {
+            this.getDiscsFromApi();
+
+        },
 
         
     }

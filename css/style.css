@@ -15,6 +15,9 @@
 header{
     background-color: #2e3a46 ;
     padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     
 }
 
@@ -26,6 +29,7 @@ header{
 main{
     background-color: #1e2d3b;
     padding-top: 50px;
+    padding-bottom: 200px;
 
 }
 
@@ -56,4 +60,11 @@ main{
 
 .card div{
     color: gray;
+}
+
+/* Select */
+select{
+    width: 200px;
+    text-align: center;
+    padding: 5px;
 }

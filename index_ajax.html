@@ -18,6 +18,18 @@
             <div class="logo">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Spotify_icon.png" alt="spotify-logo">
             </div>
+
+            <!-- Select -->
+            <div>
+                <select v-model="userGenre" @change="getDiscsFromApi"  >
+                    <option value="all">All</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Metal">Metal</option>
+                </select>
+
+            </div>
             
         </header>
     
